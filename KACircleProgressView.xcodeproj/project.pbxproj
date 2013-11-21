@@ -14,22 +14,9 @@
 		B9758A84183D9374007ED897 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9758A83183D9374007ED897 /* main.m */; };
 		B9758A88183D9374007ED897 /* KAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9758A87183D9374007ED897 /* KAAppDelegate.m */; };
 		B9758A91183D9374007ED897 /* KAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9758A90183D9374007ED897 /* KAViewController.m */; };
-		B9758A9A183D9374007ED897 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9758A99183D9374007ED897 /* XCTest.framework */; };
-		B9758A9B183D9374007ED897 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9758A77183D9374007ED897 /* Foundation.framework */; };
-		B9758A9C183D9374007ED897 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9758A7B183D9374007ED897 /* UIKit.framework */; };
 		B9758AB1183D9390007ED897 /* KACircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9758AB0183D9390007ED897 /* KACircleProgressView.m */; };
 		B9758AB3183DC79A007ED897 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9758AB2183DC79A007ED897 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B9758A9D183D9374007ED897 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9758A6C183D9374007ED897 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B9758A73183D9374007ED897;
-			remoteInfo = KACircleProgressView;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B9758A74183D9374007ED897 /* KACircleProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KACircleProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,7 +31,6 @@
 		B9758A87183D9374007ED897 /* KAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KAAppDelegate.m; sourceTree = "<group>"; };
 		B9758A8F183D9374007ED897 /* KAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KAViewController.h; sourceTree = "<group>"; };
 		B9758A90183D9374007ED897 /* KAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KAViewController.m; sourceTree = "<group>"; };
-		B9758A98183D9374007ED897 /* KACircleProgressViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KACircleProgressViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9758A99183D9374007ED897 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B9758AAF183D9390007ED897 /* KACircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KACircleProgressView.h; sourceTree = "<group>"; };
 		B9758AB0183D9390007ED897 /* KACircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KACircleProgressView.m; sourceTree = "<group>"; };
@@ -62,23 +48,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9758A95183D9374007ED897 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B9758A9A183D9374007ED897 /* XCTest.framework in Frameworks */,
-				B9758A9C183D9374007ED897 /* UIKit.framework in Frameworks */,
-				B9758A9B183D9374007ED897 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		B9758A6B183D9374007ED897 = {
 			isa = PBXGroup;
 			children = (
-				B9758A7D183D9374007ED897 /* KACircleProgressView */,
+				B9758A7D183D9374007ED897 /* KACircleProgressViewProject */,
 				B9758A76183D9374007ED897 /* Frameworks */,
 				B9758A75183D9374007ED897 /* Products */,
 			);
@@ -88,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				B9758A74183D9374007ED897 /* KACircleProgressView.app */,
-				B9758A98183D9374007ED897 /* KACircleProgressViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,7 +79,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B9758A7D183D9374007ED897 /* KACircleProgressView */ = {
+		B9758A7D183D9374007ED897 /* KACircleProgressViewProject */ = {
 			isa = PBXGroup;
 			children = (
 				B9758A86183D9374007ED897 /* KAAppDelegate.h */,
@@ -114,6 +89,7 @@
 				B9758AB4183DCC37007ED897 /* KACircleProgressView */,
 				B9758A7E183D9374007ED897 /* Supporting Files */,
 			);
+			name = KACircleProgressViewProject;
 			path = KACircleProgressView;
 			sourceTree = "<group>";
 		};
@@ -158,24 +134,6 @@
 			productReference = B9758A74183D9374007ED897 /* KACircleProgressView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B9758A97183D9374007ED897 /* KACircleProgressViewTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B9758AAC183D9374007ED897 /* Build configuration list for PBXNativeTarget "KACircleProgressViewTests" */;
-			buildPhases = (
-				B9758A94183D9374007ED897 /* Sources */,
-				B9758A95183D9374007ED897 /* Frameworks */,
-				B9758A96183D9374007ED897 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B9758A9E183D9374007ED897 /* PBXTargetDependency */,
-			);
-			name = KACircleProgressViewTests;
-			productName = KACircleProgressViewTests;
-			productReference = B9758A98183D9374007ED897 /* KACircleProgressViewTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -185,11 +143,6 @@
 				CLASSPREFIX = KA;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Kenneth Parker Ackerson";
-				TargetAttributes = {
-					B9758A97183D9374007ED897 = {
-						TestTargetID = B9758A73183D9374007ED897;
-					};
-				};
 			};
 			buildConfigurationList = B9758A6F183D9374007ED897 /* Build configuration list for PBXProject "KACircleProgressView" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -205,7 +158,6 @@
 			projectRoot = "";
 			targets = (
 				B9758A73183D9374007ED897 /* KACircleProgressView */,
-				B9758A97183D9374007ED897 /* KACircleProgressViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -217,13 +169,6 @@
 			files = (
 				B9758A82183D9374007ED897 /* InfoPlist.strings in Resources */,
 				B9758AB3183DC79A007ED897 /* Default-568h@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9758A96183D9374007ED897 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,22 +186,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9758A94183D9374007ED897 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B9758A9E183D9374007ED897 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B9758A73183D9374007ED897 /* KACircleProgressView */;
-			targetProxy = B9758A9D183D9374007ED897 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B9758A80183D9374007ED897 /* InfoPlist.strings */ = {
@@ -372,48 +302,6 @@
 			};
 			name = Release;
 		};
-		B9758AAD183D9374007ED897 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KACircleProgressView.app/KACircleProgressView";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KACircleProgressView/KACircleProgressView-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "KACircleProgressViewTests/KACircleProgressViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		B9758AAE183D9374007ED897 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KACircleProgressView.app/KACircleProgressView";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KACircleProgressView/KACircleProgressView-Prefix.pch";
-				INFOPLIST_FILE = "KACircleProgressViewTests/KACircleProgressViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -431,15 +319,6 @@
 			buildConfigurations = (
 				B9758AAA183D9374007ED897 /* Debug */,
 				B9758AAB183D9374007ED897 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B9758AAC183D9374007ED897 /* Build configuration list for PBXNativeTarget "KACircleProgressViewTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B9758AAD183D9374007ED897 /* Debug */,
-				B9758AAE183D9374007ED897 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

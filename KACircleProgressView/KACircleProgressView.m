@@ -14,6 +14,7 @@
 @property (nonatomic, strong) CAShapeLayer * progressBar; // progressbar shape
 @property (nonatomic, strong) CAShapeLayer * backgroundCircle; // background circle shape
 
+
 @end
 @implementation KACircleProgressView
 #pragma mark - Init Methods -
@@ -35,6 +36,7 @@
         NSAssert(type == KACircleProgressViewTypeCirclePlain, @"Should not use this initializer with KACircleProgressViewTypeCirclePlain, please use - (id)initWithSize:(float)size withType:(KACircleProgressViewType)type andProgressBarLineWidth:(int)progressBarLineWidth andCircleBackLineWidth:(int)circlebackLW ");
         lineWidthOfProgressBar = progressBarLineWidth;
         lineWidthOfCircleBacking = 0; // default value, if you want to set this use "- (id)initWithSize:(float)size withType:(KACircleProgressViewType)type andProgressBarLineWidth:(int)progressBarLineWidth andCircleBackLineWidth:(int)circlebackLW"
+        
         [self createLayersWithType:type];
     }
     return self;
@@ -56,16 +58,21 @@
 - (void)createLayersWithType:(KACircleProgressViewType)type{
     self.type = type;
     if (self.type == KACircleProgressViewTypeCircleBacked){
-        self.backgroundCircle = [CAShapeLayer layer];
-        self.backgroundCircle .strokeColor = [UIColor darkGrayColor].CGColor;
-        self.backgroundCircle .fillColor = [UIColor clearColor].CGColor;
-        self.backgroundCircle .lineWidth = lineWidthOfCircleBacking;
-        [self.layer addSublayer:self.backgroundCircle ];
-        UIBezierPath *pathForBackground = [UIBezierPath bezierPath];
-        pathForBackground.lineWidth = lineWidthOfCircleBacking;
-        CGFloat radius = (self.bounds.size.width - (lineWidthOfCircleBacking+lineWidthOfProgressBar)/2.f)/2;
-        [pathForBackground addArcWithCenter:CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2) radius:radius startAngle:M_PI/2.f endAngle:2.0*M_PI + M_PI/2.f clockwise:YES];
-        self.backgroundCircle .path = pathForBackground.CGPath;
+  
+        self.button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.button addTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
+        [self.button setTitle:@"Tap to refresh" forState:UIControlStateNormal];
+        self.button.titleLabel.font = [UIFont systemFontOfSize:12];
+        
+        self.button.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.width);
+        self.button.clipsToBounds = YES;
+        self.button.layer.backgroundColor = [UIColor darkGrayColor].CGColor;
+        self.button.layer.cornerRadius = self.bounds.size.width/2;//half of the width
+        self.button.layer.borderColor=[UIColor redColor].CGColor;
+        self.button.layer.borderWidth=lineWidthOfCircleBacking;
+        
+        [self addSubview:self.button];
+        
     }    
     self.progressBar = [CAShapeLayer layer];
     self.progressBar.lineWidth = lineWidthOfProgressBar;
@@ -77,12 +84,6 @@
     [self setBackgroundColor:[UIColor clearColor]];
 }
 
-// setting color of circled back circle
-- (void)setColorOfBackCircle:(UIColor *)color{
-    NSAssert(self.type == KACircleProgressViewTypeCircleBacked, @"Should not use this method; there is no such thing as back circle because of type you initiated this view with");
-    [self.backgroundCircle setStrokeColor:color.CGColor];
-    [self setNeedsDisplay];
-}
 
 // setting color of progress bar
 - (void)setColorOfProgressBar:(UIColor *)color{

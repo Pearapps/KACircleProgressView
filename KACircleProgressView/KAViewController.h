@@ -14,7 +14,9 @@
     UILabel *lblProgress;;
     UILabel *lblDuration;;
     double duration;
+    double currentValue;
     KACircleProgressView * circlePV;
+    
     
 }
 

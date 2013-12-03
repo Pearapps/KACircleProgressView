@@ -11,12 +11,15 @@ typedef enum{
 } KACircleProgressViewType; // type
 #import <UIKit/UIKit.h>
 
-@interface KACircleProgressView : UIView
+@interface KACircleProgressView : UIView{
+
+}
 
 @property (nonatomic, assign) float progress; // progress of the progress view
 
 @property (nonatomic, assign) KACircleProgressViewType type; // type of progress view
 
+@property (nonatomic, strong) UIButton * button;
 
 
 // initializer that takes a size (width AND height of view) and a type of progress view

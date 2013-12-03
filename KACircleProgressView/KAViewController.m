@@ -23,6 +23,7 @@
     [circlePV setProgress:0.3]; // set progress to 0.1 out of 1.0
     [self.view addSubview:circlePV];
     [circlePV setCenter:CGPointMake([[UIScreen mainScreen] bounds].size.width/2, [[UIScreen mainScreen] bounds].size.height/2)];
+    [circlePV.button setBackgroundColor:[UIColor darkGrayColor]];
     [circlePV.button addTarget:self action:@selector(refresh) forControlEvents:UIControlEventTouchUpInside];
     [circlePV.button setTitle:@"Tap to refresh" forState:UIControlStateNormal];
     

@@ -60,8 +60,8 @@
     if (self.type == KACircleProgressViewTypeCircleBacked){
   
         self.button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.button addTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
-        [self.button setTitle:@"Tap to refresh" forState:UIControlStateNormal];
+        //[self.button addTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
+      //  [self.button setTitle:@"Tap to refresh" forState:UIControlStateNormal];
         self.button.titleLabel.font = [UIFont systemFontOfSize:12];
         
         self.button.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.width);

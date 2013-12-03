@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "KACircleProgressView.h"
-@interface KAViewController : UIViewController
+@interface KAViewController : UIViewController{
+    UISlider *slider0;
+    UISlider *slider1;
+    UILabel *lblProgress;;
+    UILabel *lblDuration;;
+    double duration;
+    KACircleProgressView * circlePV;
+    
+}
 
 @end

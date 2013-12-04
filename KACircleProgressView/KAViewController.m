@@ -28,7 +28,7 @@
     [circlePV.button addTarget:self action:@selector(refresh) forControlEvents:UIControlEventTouchUpInside];
     [circlePV.button setTitle:@"Tap to refresh" forState:UIControlStateNormal];
      circlePV.button.layer.borderColor=[UIColor darkGrayColor].CGColor;
-    circlePV.frame = CGRectMake(100, 200, 200, 200);
+    circlePV.frame = CGRectMake(40, 220, 200, 200);
     
     slider0 = [[UISlider alloc]initWithFrame:CGRectMake(10, 20, 200, 30)];
     [slider0 setMinimumValue:0];
@@ -101,7 +101,7 @@
     PRTweenOperation *operation = [PRTweenOperation new];
     operation.period = period;
     operation.target = self;
-    operation.timingFunction = &PRTweenTimingFunctionLinear;
+    operation.timingFunction = &PRTweenTimingFunctionCircOut;
     operation.updateSelector = @selector(update:);
     
     [[PRTween sharedInstance] addTweenOperation:operation];
@@ -110,24 +110,21 @@
 -(void)animate{
 
     PRTweenPeriod *period = [PRTweenPeriod periodWithStartValue:currentValue endValue:slider0.value duration:duration];
-    
     PRTweenOperation *operation = [PRTweenOperation new];
     operation.period = period;
     operation.target = self;
-    operation.timingFunction = &PRTweenTimingFunctionLinear;
+    operation.timingFunction = &PRTweenTimingFunctionCircOut;
     operation.updateSelector = @selector(update:);
-    
     [[PRTween sharedInstance] addTweenOperation:operation];
 }
 
 - (void)update:(PRTweenPeriod*)period {
- //   NSLog(@"update %.2f",period.tweenedValue);
+
     CGFloat f =period.tweenedValue;
     
     [circlePV setProgress:f];
     [circlePV setNeedsDisplay];
-    //[circlePV setColorOfProgressBar:[UIColor colorWithRed:1 green:1-f blue:1-f alpha:1]];
-  
+
 }
 
 

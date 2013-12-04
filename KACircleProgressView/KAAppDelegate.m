@@ -13,10 +13,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    KAViewController * kavc = [[KAViewController alloc] initWithNibName:nil bundle:nil];
-    UINavigationController * n = [[UINavigationController alloc] initWithRootViewController:kavc];
-    [kavc  setTitle:@"KACircleProgressView"];
-    [self.window setRootViewController:n];
+   
+    KAViewController * kaVC = [[KAViewController alloc] initWithNibName:nil bundle:nil];
+    [kaVC  setTitle:@"KACircleProgressView"];
+    UINavigationController *kaNC = [[UINavigationController alloc]initWithRootViewController:kaVC];
+    kaNC.navigationBar.translucent = NO;
+    
+ 
+    [self.window setRootViewController:kaNC];
     [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;

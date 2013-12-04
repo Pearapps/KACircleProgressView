@@ -94,6 +94,8 @@
 // This method maintains square frame (width x width)
 - (void)setFrame:(CGRect)frame{
     frame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.width);
+    self.button.frame = CGRectMake(0, 0, frame.size.width, frame.size.width);
+    self.button.layer.cornerRadius = frame.size.width/2;
     [super setFrame:frame];
 }
 - (void)setProgress:(float)progress{

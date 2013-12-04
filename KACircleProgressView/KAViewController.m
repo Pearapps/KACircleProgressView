@@ -18,15 +18,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
 
     circlePV = [[KACircleProgressView alloc] initWithSize:100 withType:KACircleProgressViewTypeCircleBacked andProgressBarLineWidth:7 andCircleBackLineWidth:7];
     [circlePV setProgress:0.3]; // set progress to 0.1 out of 1.0
     [self.view addSubview:circlePV];
     [circlePV setCenter:CGPointMake([[UIScreen mainScreen] bounds].size.width/2, [[UIScreen mainScreen] bounds].size.height/2)];
-    [circlePV.button setBackgroundColor:[UIColor darkGrayColor]];
+    [circlePV.button setBackgroundColor:[UIColor lightGrayColor]];
     [circlePV.button addTarget:self action:@selector(refresh) forControlEvents:UIControlEventTouchUpInside];
     [circlePV.button setTitle:@"Tap to refresh" forState:UIControlStateNormal];
-    
+     circlePV.button.layer.borderColor=[UIColor darkGrayColor].CGColor;
+    circlePV.frame = CGRectMake(100, 200, 200, 200);
     
     slider0 = [[UISlider alloc]initWithFrame:CGRectMake(10, 20, 200, 30)];
     [slider0 setMinimumValue:0];
@@ -51,7 +53,7 @@
     lblProgress.lineBreakMode = NSLineBreakByClipping;
     lblProgress.backgroundColor = [UIColor clearColor];
     lblProgress.text = @"Progress";
-    lblProgress.textColor = [UIColor whiteColor];
+    lblProgress.textColor = [UIColor blackColor];
     [self.view addSubview:lblProgress];
     
     lblDuration = [[UILabel alloc] initWithFrame:CGRectMake(0, 170, 300, 30)];
@@ -60,7 +62,7 @@
     lblDuration.backgroundColor = [UIColor clearColor];
     
     lblDuration.text = [NSString stringWithFormat:@"Animation Duration (%.2f) seconds",duration];
-    lblDuration.textColor = [UIColor whiteColor];
+    lblDuration.textColor = [UIColor blackColor];
     [self.view addSubview:lblDuration];
     
   
